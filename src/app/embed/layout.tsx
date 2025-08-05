@@ -24,7 +24,7 @@ export const metadata = {
     images: ["https://s3.expel.best/min/av.png"],
   },
 };
-export const viewport: Viewport = {
+export const viewport = {
   themeColor: "#8f9faaff",
 }
 

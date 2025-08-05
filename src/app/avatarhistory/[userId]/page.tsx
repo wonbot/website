@@ -18,7 +18,7 @@ const MOCK_DATA = {
   rows: [{
     username: "Development User",
     avatars: Array(25).fill({
-      url: "https://s3.tempt.lol/avatarhistory/5e0ruPsYZEFMWgsQ.png",
+      url: "https://s3.expel.best/avatarhistory/5e0ruPsYZEFMWgsQ.png",
       lastModified: new Date().toISOString(),
     }),
     totalCount: 25,
@@ -65,7 +65,7 @@ export async function generateMetadata({ params }: PageProps) {
       url: `https://expel.best/avatarhistory/${userId}`,
       images: [
         {
-          url: "https://s3.tempt.lol/min/av.png",
+          url: "https://s3.expel.best/min/av.png",
           width: 512,
           height: 512,
           alt: "Tempt Bot Logo",
@@ -76,7 +76,7 @@ export async function generateMetadata({ params }: PageProps) {
       card: "summary",
       title: `${username}'s Avatar History • Tempt`,
       description: "View avatar history for Discord users.",
-      images: ["https://s3.tempt.lol/min/av.png"],
+      images: ["https://s3.expel.best/min/av.png"],
     },
   };
 }
