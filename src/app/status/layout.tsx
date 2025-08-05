@@ -4,10 +4,10 @@ export const metadata = {
   openGraph: {
     title: "Tempt • Status",
     description: "Check the current status and uptime of Tempt Bot.",
-    url: "https://tempt.lol/status",
+    url: "https://expel.best/status",
     images: [
       {
-        url: "https://s3.tempt.lol/min/av.png",
+        url: "https://s3.expel.best/min/av.png",
         width: 512,
         height: 512,
         alt: "Tempt Bot Logo",
@@ -18,7 +18,7 @@ export const metadata = {
     card: "summary",
     title: "Tempt • Status",
     description: "Check the current status and uptime of Tempt Bot.",
-    images: ["https://s3.tempt.lol/min/av.png"],
+    images: ["https://s3.expel.best/min/av.png"],
   },
   themeColor: "#8faaa2",
 };

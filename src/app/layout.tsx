@@ -22,7 +22,7 @@ export const metadata = {
     url: "https://expel.best",
     images: [
       {
-        url: "https://s3.tempt.lol/min/av.png",
+        url: "https://s3.expel.best/min/av.png",
         width: 512,
         height: 512,
         alt: "Expel Logo",
@@ -36,13 +36,13 @@ export const metadata = {
     title: "Expel",
     description:
       "An aesthetic, all-in-one bot that suits all your server's needs.",
-    images: ["https://s3.tempt.lol/min/av.png"],
+    images: ["https://s3.expel.best/min/av.png"],
     themeColor: "#8faaa2",
   },
   icons: {
-    icon: "https://s3.tempt.lol/min/av.png",
-    shortcut: "https://s3.tempt.lol/min/av.png",
-    apple: "https://s3.tempt.lol/min/av.png",
+    icon: "https://s3.expel.best/min/av.png",
+    shortcut: "https://s3.expel.best/min/av.png",
+    apple: "https://s3.expel.best/min/av.png",
   },
   themeColor: "#8faaa2",
 };

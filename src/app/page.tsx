@@ -237,7 +237,7 @@ const testimonialData: TestimonialType[] = [
 ];
 
 async function getStats() {
-  const res = await fetch("https://s3.tempt.lol/min/stats.json", {
+  const res = await fetch("https://s3.expel.best/min/stats.json", {
     next: { revalidate: 60 },
   });
   const data = await res.json();
@@ -253,7 +253,7 @@ async function getStats() {
 }
 
 async function getGuilds() {
-  const res = await fetch(`https://api.tempt.lol/discord/guilds`, {
+  const res = await fetch(`https://api.expel.best/discord/guilds`, {
     headers: {
       Authorization: `Bearer ${process.env.API_TOKEN}`,
     },
@@ -261,10 +261,21 @@ async function getGuilds() {
   });
   const guilds = await res.json();
 
-  return guilds.filter((guild: { name: string; }) => {
+  return guilds.filter((guild: { name: string }) => {
     const lowerCaseName = guild.name.toLowerCase();
-    const excludeKeywords = ['nsfw', 'boost', 'bot', 'dick', 'moved', 'join', 'shop', 's server', 'hate', 'gateway'];
-    return !excludeKeywords.some(keyword => lowerCaseName.includes(keyword));
+    const excludeKeywords = [
+      "nsfw",
+      "boost",
+      "bot",
+      "dick",
+      "moved",
+      "join",
+      "shop",
+      "s server",
+      "hate",
+      "gateway",
+    ];
+    return !excludeKeywords.some((keyword) => lowerCaseName.includes(keyword));
   });
 }
 
@@ -287,7 +298,7 @@ export default async function Home() {
             >
               <div className="text-center space-y-2 w-full">
                 <Image
-                  src="https://s3.tempt.lol/min/av.png"
+                  src="https://s3.expel.best/min/av.png"
                   alt="Bot Avatar"
                   width={96}
                   height={96}
@@ -308,7 +319,7 @@ export default async function Home() {
                   style={{
                     backgroundColor: "#8faaa2",
                     color: "#1a1a1a",
-                    border: "none"
+                    border: "none",
                   }}
                   asChild
                 >
@@ -328,7 +339,7 @@ export default async function Home() {
                     backgroundColor: "rgba(143, 170, 162, 0.1)",
                     color: "#a5c0b7",
                     backdropFilter: "blur(20px)",
-                    border: "1px solid rgba(143, 170, 162, 0.3)"
+                    border: "1px solid rgba(143, 170, 162, 0.3)",
                   }}
                   asChild
                 >
@@ -411,7 +422,7 @@ export default async function Home() {
                 style={{
                   backgroundColor: "#8faaa2",
                   color: "#1a1a1a",
-                  border: "none"
+                  border: "none",
                 }}
                 asChild
               >

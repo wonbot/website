@@ -234,7 +234,7 @@ export default function EmbedBuilder() {
     text = text.replace(/~~(.*?)~~/g, "<del>$1</del>");
     text = text.replace(
       /\`\`\`([\s\S]*?)\`\`\`/g,
-      "<pre><code>$1</code></pre>",
+      "<pre><code>$1</code></pre>"
     );
     text = text.replace(/\`(.*?)\`/g, "<code>$1</code>");
     text = text.replace(/^>>>\s(.+)$/gm, "<blockquote>$1</blockquote>");
@@ -252,7 +252,7 @@ export default function EmbedBuilder() {
     if (!text) return text;
     return Object.entries(variables).reduce(
       (acc, [key, value]) => acc.replaceAll(key, value),
-      text,
+      text
     );
   };
 
@@ -331,7 +331,10 @@ export default function EmbedBuilder() {
                       <motion.div
                         initial={false}
                         animate={{ rotate: openSections.general ? 180 : 0 }}
-                        transition={{ duration: 0.15, ease: [0.32, 0.72, 0, 1] }}
+                        transition={{
+                          duration: 0.15,
+                          ease: [0.32, 0.72, 0, 1],
+                        }}
                       >
                         <ChevronDownIcon />
                       </motion.div>
@@ -344,7 +347,10 @@ export default function EmbedBuilder() {
                             animate={{ height: "auto", opacity: 1, y: 0 }}
                             exit={{ height: 0, opacity: 0, y: -5 }}
                             transition={{
-                              height: { duration: 0.2, ease: [0.32, 0.72, 0, 1] },
+                              height: {
+                                duration: 0.2,
+                                ease: [0.32, 0.72, 0, 1],
+                              },
                               opacity: { duration: 0.15, ease: "easeOut" },
                               y: { duration: 0.15, ease: [0.32, 0.72, 0, 1] },
                             }}
@@ -371,11 +377,15 @@ export default function EmbedBuilder() {
                                         input.style.height = "100%";
                                         input.style.opacity = "0";
                                         input.style.cursor = "pointer";
-                                        input.addEventListener("change", (e) => {
-                                          handleColorChange(
-                                            (e.target as HTMLInputElement).value,
-                                          );
-                                        });
+                                        input.addEventListener(
+                                          "change",
+                                          (e) => {
+                                            handleColorChange(
+                                              (e.target as HTMLInputElement)
+                                                .value
+                                            );
+                                          }
+                                        );
                                         e.currentTarget.appendChild(input);
                                         input.click();
                                         input.addEventListener("blur", () => {
@@ -485,7 +495,10 @@ export default function EmbedBuilder() {
                       <motion.div
                         initial={false}
                         animate={{ rotate: openSections.author ? 180 : 0 }}
-                        transition={{ duration: 0.15, ease: [0.32, 0.72, 0, 1] }}
+                        transition={{
+                          duration: 0.15,
+                          ease: [0.32, 0.72, 0, 1],
+                        }}
                       >
                         <ChevronDownIcon />
                       </motion.div>
@@ -498,7 +511,10 @@ export default function EmbedBuilder() {
                             animate={{ height: "auto", opacity: 1, y: 0 }}
                             exit={{ height: 0, opacity: 0, y: -5 }}
                             transition={{
-                              height: { duration: 0.2, ease: [0.32, 0.72, 0, 1] },
+                              height: {
+                                duration: 0.2,
+                                ease: [0.32, 0.72, 0, 1],
+                              },
                               opacity: { duration: 0.15, ease: "easeOut" },
                               y: { duration: 0.15, ease: [0.32, 0.72, 0, 1] },
                             }}
@@ -585,7 +601,10 @@ export default function EmbedBuilder() {
                             animate={{ height: "auto", opacity: 1, y: 0 }}
                             exit={{ height: 0, opacity: 0, y: -5 }}
                             transition={{
-                              height: { duration: 0.2, ease: [0.32, 0.72, 0, 1] },
+                              height: {
+                                duration: 0.2,
+                                ease: [0.32, 0.72, 0, 1],
+                              },
                               opacity: { duration: 0.15, ease: "easeOut" },
                               y: { duration: 0.15, ease: [0.32, 0.72, 0, 1] },
                             }}
@@ -616,8 +635,11 @@ export default function EmbedBuilder() {
                                             type="text"
                                             value={field.name}
                                             onChange={(e) => {
-                                              const newFields = [...form.fields];
-                                              newFields[i].name = e.target.value;
+                                              const newFields = [
+                                                ...form.fields,
+                                              ];
+                                              newFields[i].name =
+                                                e.target.value;
                                               setForm((prev) => ({
                                                 ...prev,
                                                 fields: newFields,
@@ -662,8 +684,11 @@ export default function EmbedBuilder() {
                                           <TextArea
                                             value={field.value}
                                             onChange={(e) => {
-                                              const newFields = [...form.fields];
-                                              newFields[i].value = e.target.value;
+                                              const newFields = [
+                                                ...form.fields,
+                                              ];
+                                              newFields[i].value =
+                                                e.target.value;
                                               setForm((prev) => ({
                                                 ...prev,
                                                 fields: newFields,
@@ -723,7 +748,10 @@ export default function EmbedBuilder() {
                             animate={{ height: "auto", opacity: 1, y: 0 }}
                             exit={{ height: 0, opacity: 0, y: -5 }}
                             transition={{
-                              height: { duration: 0.2, ease: [0.32, 0.72, 0, 1] },
+                              height: {
+                                duration: 0.2,
+                                ease: [0.32, 0.72, 0, 1],
+                              },
                               opacity: { duration: 0.15, ease: "easeOut" },
                               y: { duration: 0.15, ease: [0.32, 0.72, 0, 1] },
                             }}
@@ -763,7 +791,9 @@ export default function EmbedBuilder() {
                                         <select
                                           value={button.style}
                                           onChange={(e) => {
-                                            const newButtons = [...form.buttons];
+                                            const newButtons = [
+                                              ...form.buttons,
+                                            ];
                                             newButtons[i].style = e.target
                                               .value as any;
                                             setForm((prev) => ({
@@ -856,7 +886,10 @@ export default function EmbedBuilder() {
                       <motion.div
                         initial={false}
                         animate={{ rotate: openSections.footer ? 180 : 0 }}
-                        transition={{ duration: 0.15, ease: [0.32, 0.72, 0, 1] }}
+                        transition={{
+                          duration: 0.15,
+                          ease: [0.32, 0.72, 0, 1],
+                        }}
                       >
                         <ChevronDownIcon />
                       </motion.div>
@@ -869,7 +902,10 @@ export default function EmbedBuilder() {
                             animate={{ height: "auto", opacity: 1, y: 0 }}
                             exit={{ height: 0, opacity: 0, y: -5 }}
                             transition={{
-                              height: { duration: 0.2, ease: [0.32, 0.72, 0, 1] },
+                              height: {
+                                duration: 0.2,
+                                ease: [0.32, 0.72, 0, 1],
+                              },
                               opacity: { duration: 0.15, ease: "easeOut" },
                               y: { duration: 0.15, ease: [0.32, 0.72, 0, 1] },
                             }}
@@ -974,7 +1010,7 @@ export default function EmbedBuilder() {
                 <div className="bg-[#36393f] rounded-lg p-4">
                   <div className="flex items-center gap-2 mb-2">
                     <img
-                      src="https://s3.tempt.lol/min/av.png"
+                      src="https://s3.expel.best/min/av.png"
                       alt="Bot Avatar"
                       className="w-10 h-10 rounded-full"
                     />
@@ -1051,7 +1087,7 @@ export default function EmbedBuilder() {
                           className="text-[#dbdee1] whitespace-pre-wrap"
                           dangerouslySetInnerHTML={{
                             __html: formatDiscordMarkdown(
-                              replaceVariables(form.description),
+                              replaceVariables(form.description)
                             ),
                           }}
                         />
@@ -1072,7 +1108,7 @@ export default function EmbedBuilder() {
                                 className="text-[#dbdee1] whitespace-pre-wrap"
                                 dangerouslySetInnerHTML={{
                                   __html: formatDiscordMarkdown(
-                                    replaceVariables(field.value),
+                                    replaceVariables(field.value)
                                   ),
                                 }}
                               />
@@ -1128,7 +1164,11 @@ export default function EmbedBuilder() {
                             className={`
                               px-4 py-2 rounded text-sm font-medium text-white flex items-center gap-2
                               ${getButtonStyle()}
-                              ${button.disabled ? "opacity-50 cursor-not-allowed" : "hover:brightness-110"}
+                              ${
+                                button.disabled
+                                  ? "opacity-50 cursor-not-allowed"
+                                  : "hover:brightness-110"
+                              }
                             `}
                             disabled={button.disabled}
                           >

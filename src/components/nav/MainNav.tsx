@@ -39,11 +39,15 @@ export function MainNav() {
           <div
             className={`
             absolute left-2 flex items-center transition-all duration-500
-            ${isScrolled ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"}
+            ${
+              isScrolled
+                ? "opacity-100 translate-x-0"
+                : "opacity-0 -translate-x-4"
+            }
           `}
           >
             <img
-              src="https://s3.tempt.lol/min/av.png"
+              src="https://s3.expel.best/min/av.png"
               alt="Tempt Bot"
               className="w-6 h-6 sm:w-7 sm:h-7 rounded-full ring-2 ring-[#8faaa2]/20"
             />
@@ -60,7 +64,11 @@ export function MainNav() {
                 href="/"
                 className={`
                   relative px-2 sm:px-4 py-1.5 text-xs sm:text-sm transition-colors group flex items-center
-                  ${pathname === "/" ? "text-foreground" : "text-foreground/60 hover:text-foreground/80"}
+                  ${
+                    pathname === "/"
+                      ? "text-foreground"
+                      : "text-foreground/60 hover:text-foreground/80"
+                  }
                 `}
               >
                 <span className="relative z-10">Home</span>
@@ -76,7 +84,11 @@ export function MainNav() {
                 href="/commands"
                 className={`
                   relative px-2 sm:px-4 py-1.5 text-xs sm:text-sm transition-colors group flex items-center
-                  ${pathname === "/commands" ? "text-foreground" : "text-foreground/60 hover:text-foreground/80"}
+                  ${
+                    pathname === "/commands"
+                      ? "text-foreground"
+                      : "text-foreground/60 hover:text-foreground/80"
+                  }
                 `}
               >
                 <span className="relative z-10">Commands</span>
@@ -92,7 +104,11 @@ export function MainNav() {
                 href="/embed"
                 className={`
                   relative px-2 sm:px-4 py-1.5 text-xs sm:text-sm transition-colors group flex items-center
-                  ${pathname === "/embed" ? "text-foreground" : "text-foreground/60 hover:text-foreground/80"}
+                  ${
+                    pathname === "/embed"
+                      ? "text-foreground"
+                      : "text-foreground/60 hover:text-foreground/80"
+                  }
                 `}
               >
                 <span className="relative z-10">Embeds</span>
@@ -108,17 +124,23 @@ export function MainNav() {
                 href="/status"
                 className={`
                   relative text-xs sm:text-sm transition-colors group flex items-center
-                  ${pathname === "/status" ? "text-foreground" : "text-foreground/60 hover:text-foreground/80"}
+                  ${
+                    pathname === "/status"
+                      ? "text-foreground"
+                      : "text-foreground/60 hover:text-foreground/80"
+                  }
                   ${isScrolled ? "px-2 sm:px-3" : "px-2 sm:px-4"} py-1.5
                 `}
               >
                 <span className="relative z-10 flex items-center gap-1 sm:gap-2">
-                    <div className="relative flex w-1.5 sm:w-2 h-1.5 sm:h-2 shrink-0">
-                      <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-[#8faaa2]" />
-                      <div className="absolute inset-0 w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-[#8faaa2] animate-ping opacity-75" />
-                    </div>
+                  <div className="relative flex w-1.5 sm:w-2 h-1.5 sm:h-2 shrink-0">
+                    <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-[#8faaa2]" />
+                    <div className="absolute inset-0 w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-[#8faaa2] animate-ping opacity-75" />
+                  </div>
                   <span
-                    className={`transition-transform duration-200 ${isScrolled ? "w-0 opacity-0" : "w-auto opacity-100"}`}
+                    className={`transition-transform duration-200 ${
+                      isScrolled ? "w-0 opacity-0" : "w-auto opacity-100"
+                    }`}
                   >
                     Status
                   </span>
@@ -141,7 +163,11 @@ export function MainNav() {
                     bg-gradient-to-r from-[#8faaa2] to-[#3f5c53] text-white
                     transition-all duration-300 ease-in-out overflow-hidden
                     hover:brightness-110 hover:scale-[0.98]
-                    ${isScrolled ? "w-8 sm:w-9 h-8 sm:h-9" : "w-8 sm:w-[120px] h-8 sm:h-9"}
+                    ${
+                      isScrolled
+                        ? "w-8 sm:w-9 h-8 sm:h-9"
+                        : "w-8 sm:w-[120px] h-8 sm:h-9"
+                    }
                     rounded-full mr-1
                   `}
                 >
@@ -149,7 +175,11 @@ export function MainNav() {
                     className={`
                     absolute inset-0 flex items-center justify-center
                     transition-all duration-300 ease-in-out
-                    ${isScrolled ? "translate-x-0 scale-100" : "translate-x-0 sm:-translate-x-8 scale-100 sm:scale-0"}
+                    ${
+                      isScrolled
+                        ? "translate-x-0 scale-100"
+                        : "translate-x-0 sm:-translate-x-8 scale-100 sm:scale-0"
+                    }
                   `}
                   >
                     <svg
@@ -171,7 +201,11 @@ export function MainNav() {
                     absolute inset-0 items-center justify-center
                     transition-all duration-300 ease-in-out
                     hidden sm:flex
-                    ${isScrolled ? "opacity-0 translate-x-4" : "opacity-100 translate-x-0"}
+                    ${
+                      isScrolled
+                        ? "opacity-0 translate-x-4"
+                        : "opacity-100 translate-x-0"
+                    }
                   `}
                   >
                     <span className="text-[11px] leading-none sm:text-sm font-medium whitespace-nowrap tracking-tight flex items-center gap-2">
@@ -203,7 +237,8 @@ export function MainNav() {
                       Join our community
                     </h4>
                     <p className="text-xs sm:text-sm text-muted-foreground">
-                      Get help, stay updated, and connect with other Expel users.
+                      Get help, stay updated, and connect with other Expel
+                      users.
                     </p>
                   </div>
                   <HoverCard.Arrow className="fill-[#8faaa2]/10" />

@@ -21,7 +21,7 @@ export default function CommandsPage() {
       }
 
       try {
-        const response = await fetch("https://s3.tempt.lol/min/cmds.json");
+        const response = await fetch("https://s3.expel.best/min/cmds.json");
         const data = await response.json();
         commandsCache = data;
         setCommands(data);
@@ -44,7 +44,7 @@ export default function CommandsPage() {
 
       const isParentCommand = commands.some(
         (other) =>
-          other.name.startsWith(cmd.name + " ") && other.name !== cmd.name,
+          other.name.startsWith(cmd.name + " ") && other.name !== cmd.name
       );
       if (isParentCommand) return false;
 
@@ -64,8 +64,8 @@ export default function CommandsPage() {
             .toLowerCase()
             .includes(searchQuery.toLowerCase()) ||
           command.aliases?.some((alias) =>
-            alias.toLowerCase().includes(searchQuery.toLowerCase()),
-          ),
+            alias.toLowerCase().includes(searchQuery.toLowerCase())
+          )
       )
       .sort((a, b) => a.name.localeCompare(b.name));
   }, [activeCategory, searchQuery, commands]);
@@ -75,16 +75,13 @@ export default function CommandsPage() {
 
     const hiddenCategories = ["Jishaku", "Developer"];
     const visibleCommands = commands.filter(
-      (cmd) => !hiddenCategories.includes(cmd.cog),
+      (cmd) => !hiddenCategories.includes(cmd.cog)
     );
 
-    return visibleCommands.reduce(
-      (acc, command) => {
-        acc[command.cog] = (acc[command.cog] || 0) + 1;
-        return acc;
-      },
-      {} as Record<string, number>,
-    );
+    return visibleCommands.reduce((acc, command) => {
+      acc[command.cog] = (acc[command.cog] || 0) + 1;
+      return acc;
+    }, {} as Record<string, number>);
   }, [commands]);
 
   return (

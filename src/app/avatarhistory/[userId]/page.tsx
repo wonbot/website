@@ -62,7 +62,7 @@ export async function generateMetadata({ params }: PageProps) {
     openGraph: {
       title: `${username}'s Avatar History • Tempt`,
       description: "View avatar history for Discord users.",
-      url: `https://tempt.lol/avatarhistory/${userId}`,
+      url: `https://expel.best/avatarhistory/${userId}`,
       images: [
         {
           url: "https://s3.tempt.lol/min/av.png",
