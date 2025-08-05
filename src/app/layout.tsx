@@ -37,16 +37,16 @@ export const metadata = {
     description:
       "An aesthetic, all-in-one bot that suits all your server's needs.",
     images: ["https://s3.expel.best/min/av.png"],
-    themeColor: "#8faaa2",
   },
   icons: {
     icon: "https://s3.expel.best/min/av.png",
     shortcut: "https://s3.expel.best/min/av.png",
     apple: "https://s3.expel.best/min/av.png",
   },
-  themeColor: "#8faaa2",
 };
-
+export const viewport: Viewport = {
+  themeColor: "#8f9daaff",
+}
 export default function RootLayout({
   children,
 }: Readonly<{

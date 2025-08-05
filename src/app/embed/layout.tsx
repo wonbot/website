@@ -15,7 +15,6 @@ export const metadata = {
         alt: "Expel Logo",
       },
     ],
-    themeColor: "#8faaa2",
   },
   twitter: {
     card: "summary",
@@ -25,6 +24,9 @@ export const metadata = {
     images: ["https://s3.expel.best/min/av.png"],
   },
 };
+export const viewport: Viewport = {
+  themeColor: "#8f9faaff",
+}
 
 export default function EmbedLayout({
   children,

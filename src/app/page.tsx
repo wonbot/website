@@ -224,15 +224,15 @@ interface TestimonialType {
 const testimonialData: TestimonialType[] = [
   {
     userId: "930383131863842816",
-    text: "Love how Tempt handles our server! Easy to use with all needed features.",
+    text: "Love how Expel handles our server! Easy to use with all needed features.",
   },
   {
     userId: "1273201960685928468",
-    text: "Lure is a magical tool for every com server.",
+    text: "Expel is a magical tool for every com server.",
   },
   {
     userId: "1323987827809058931",
-    text: "Using Lure's user-app features for a while now, especially for the social media reposting stuff. Really love it.",
+    text: "Using Expel's user-app features for a while now, especially for the social media reposting stuff. Really love it.",
   },
 ];
 
