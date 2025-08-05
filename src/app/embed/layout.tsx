@@ -9,7 +9,7 @@ export const metadata = {
     url: "https://expel.best/embed",
     images: [
       {
-        url: "https://s3.tempt.lol/min/av.png",
+        url: "https://s3.expel.best/min/av.png",
         width: 512,
         height: 512,
         alt: "Expel Logo",
@@ -22,7 +22,7 @@ export const metadata = {
     title: "Expel | Embed Builder",
     description:
       "Create and customize Discord embeds with our easy-to-use embed builder.",
-    images: ["https://s3.tempt.lol/min/av.png"],
+    images: ["https://s3.expel.best/min/av.png"],
   },
 };
 

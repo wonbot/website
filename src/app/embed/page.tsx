@@ -76,7 +76,7 @@ const variables = {
   "{guild.name}": "Tempt Bot",
   "{guild.count}": "15234",
   "{guild.count.format}": "15,234",
-  "{guild.id}": 1271901054988058644",
+  "{guild.id}": "1271901054988058644",
   "{guild.created_at}": "August 10, 2024",
   "{guild.boost_count}": "29",
   "{guild.booster_count}": "17",
