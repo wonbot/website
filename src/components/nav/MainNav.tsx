@@ -203,7 +203,7 @@ export function MainNav() {
                       Join our community
                     </h4>
                     <p className="text-xs sm:text-sm text-muted-foreground">
-                      Get help, stay updated, and connect with other Tempt users.
+                      Get help, stay updated, and connect with other Expel users.
                     </p>
                   </div>
                   <HoverCard.Arrow className="fill-[#8faaa2]/10" />
