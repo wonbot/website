@@ -61,8 +61,8 @@ export default function StatusPage() {
     const fetchStats = async () => {
       try {
         const [statsRes, healthRes] = await Promise.all([
-          fetch("/s", { priority: "high", cache: "no-store" }),
-          fetch("/h", { priority: "high", cache: "no-store" })
+          fetch("/api/s", { priority: "high", cache: "no-store" }),
+          fetch("/api/h", { priority: "high", cache: "no-store" })
         ]);
 
         if (!statsRes.ok || !healthRes.ok) {
