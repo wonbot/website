@@ -12,20 +12,20 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Tempt",
+  title: "Expel",
   description:
     "An aesthetic, all-in-one bot that suits all your server's needs.",
   openGraph: {
-    title: "Tempt Bot",
+    title: "Expel",
     description:
       "An aesthetic, all-in-one bot that suits all your server's needs.",
-    url: "https://tempt.lol",
+    url: "https://expel.best",
     images: [
       {
         url: "https://s3.tempt.lol/min/av.png",
         width: 512,
         height: 512,
-        alt: "Tempt Bot Logo",
+        alt: "Expel Logo",
       },
     ],
     locale: "en_US",
@@ -33,7 +33,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Tempt Bot",
+    title: "Expel",
     description:
       "An aesthetic, all-in-one bot that suits all your server's needs.",
     images: ["https://s3.tempt.lol/min/av.png"],
