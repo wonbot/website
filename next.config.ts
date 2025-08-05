@@ -45,7 +45,6 @@ const nextConfig: NextConfig = {
       "media.discordapp.net",
       "i.imgur.com",
       "cdn.coffin.lol",
-      "s3.tempt.lol",
       "s3.tempt.lol"
     ],
   },

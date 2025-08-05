@@ -135,7 +135,7 @@ export function MainNav() {
             <HoverCard.Root>
               <HoverCard.Trigger asChild>
                 <Link
-                  href="https://discord.gg/tempt"
+                  href="https://discord.gg/won"
                   className={`
                     relative inline-flex items-center justify-center
                     bg-gradient-to-r from-[#8faaa2] to-[#3f5c53] text-white

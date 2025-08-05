@@ -7,7 +7,7 @@ export default function TermsPage() {
             Terms of Service
           </h1>
           <p className="text-muted-foreground">
-            Last updated and effective: March 14, 2025, 8:30 PM GMT
+            Last updated and effective: August 4, 2025, 10:51 PM EST
           </p>
         </div>
 
