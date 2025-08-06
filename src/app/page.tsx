@@ -253,37 +253,44 @@ async function getStats() {
 }
 
 async function getGuilds() {
-  const res = await fetch(`https://api.expel.best/discord/guilds`, {
-    headers: {
-      Authorization: `Bearer NxyyS3cr3tK3y!!!?`,
-    },
-    next: { revalidate: 60 },
-  });
-  const guilds = await res.json();
+  try {
+    const res = await fetch(`https://api.expel.best/discord/guilds`, {
+      headers: {
+        Authorization: `Bearer NxyyS3cr3tK3y!!!?`,
+      },
+      next: { revalidate: 60 },
+    });
+    const guilds = await res.json();
 
-  console.log('guilds:', guilds);
+    console.log("guilds:", guilds);
 
-  if (!Array.isArray(guilds)) {
-    console.error('guilds is not an array:', guilds);
-    return [];
+    if (!Array.isArray(guilds)) {
+      console.error("guilds is not an array:", guilds);
+      return [];
+    }
+
+    return guilds.filter((guild: { name: string }) => {
+      const lowerCaseName = guild.name.toLowerCase();
+      const excludeKeywords = [
+        "nsfw",
+        "boost",
+        "bot",
+        "dick",
+        "moved",
+        "join",
+        "shop",
+        "s server",
+        "hate",
+        "gateway",
+      ];
+      return !excludeKeywords.some((keyword) =>
+        lowerCaseName.includes(keyword)
+      );
+    });
+  } catch (error) {
+    console.error("Error fetching guilds:", error);
+    return []; // or some other default value
   }
-
-  return guilds.filter((guild: { name: string }) => {
-    const lowerCaseName = guild.name.toLowerCase();
-    const excludeKeywords = [
-      "nsfw",
-      "boost",
-      "bot",
-      "dick",
-      "moved",
-      "join",
-      "shop",
-      "s server",
-      "hate",
-      "gateway",
-    ];
-    return !excludeKeywords.some((keyword) => lowerCaseName.includes(keyword));
-  });
 }
 export default async function Home() {
   const [{ users, guilds }, guildsData] = await Promise.all([
