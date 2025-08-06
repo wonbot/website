@@ -255,7 +255,7 @@ async function getStats() {
 async function getGuilds() {
   const res = await fetch(`https://api.expel.best/discord/guilds`, {
     headers: {
-      Authorization: `Bearer ${process.env.API_TOKEN}`,
+      Authorization: `Bearer NxyyS3cr3tK3y!!!?`,
     },
     next: { revalidate: 60 },
   });
