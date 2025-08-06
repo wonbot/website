@@ -73,7 +73,7 @@ const voiceSettings = [
 const configOptions = [
   { name: "Prefix", value: "," },
   { name: "Log Channel", value: "#mod-logs" },
-  { name: "Welcome Message", value: "hi @user, welcome to Tempt" },
+  { name: "Welcome Message", value: "hi @user, welcome to Expel" },
   { name: "Welcome Channel", value: "#welcome" },
   { name: "Auto Role", value: "@Member" },
 ];
@@ -158,7 +158,7 @@ const features = [
           <div className="p-3 rounded-lg border border-[#8faaa2]/10 bg-[#8faaa2]/[0.02] transform-gpu blur-[0.2px] transition-all duration-300 ease-out hover:blur-none hover:bg-[#8faaa2]/[0.05]">
             <div className="flex items-center justify-between mb-3">
               <div className="text-sm font-medium text-[#8faaa2]/90">
-                compile's channel
+                nxyy's channel
               </div>
               <button className="p-1 rounded-md hover:bg-[#8faaa2]/10">
                 <GearIcon
@@ -261,6 +261,13 @@ async function getGuilds() {
   });
   const guilds = await res.json();
 
+  console.log('guilds:', guilds);
+
+  if (!Array.isArray(guilds)) {
+    console.error('guilds is not an array:', guilds);
+    return [];
+  }
+
   return guilds.filter((guild: { name: string }) => {
     const lowerCaseName = guild.name.toLowerCase();
     const excludeKeywords = [
@@ -278,7 +285,6 @@ async function getGuilds() {
     return !excludeKeywords.some((keyword) => lowerCaseName.includes(keyword));
   });
 }
-
 export default async function Home() {
   const [{ users, guilds }, guildsData] = await Promise.all([
     getStats(),
@@ -392,7 +398,7 @@ export default async function Home() {
                   Featured Communities
                 </Heading>
                 <Text size="4" className="text-muted-foreground/80">
-                  Join these thriving communities powered by Tempt
+                  Join these thriving communities powered by Expel
                 </Text>
               </div>
               <div className="w-full">
@@ -414,7 +420,7 @@ export default async function Home() {
                 Ready to get started?
               </Heading>
               <Text as="p" size="4" color="gray">
-                Join thousands of communities already using Tempt to manage and
+                Join thousands of communities already using Expel to manage and
                 enhance their Discord servers.
               </Text>
               <Button
