@@ -158,9 +158,9 @@ body {
   --aurora-speed: 10s;
   background-image: linear-gradient(
     45deg,
-    rgba(103, 145, 229, var(--aurora-opacity)),
-    rgba(70, 113, 198, var(--aurora-opacity)),
-    rgba(45, 67, 116, var(--aurora-opacity))
+    rgba(82, 116, 183, var(--aurora-opacity)),
+    rgba(63, 101, 178, var(--aurora-opacity)),
+    rgba(36, 53, 92, var(--aurora-opacity))
   );
   filter: blur(var(--aurora-blur));
   animation: aurora var(--aurora-speed) linear infinite;
