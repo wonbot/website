@@ -5,7 +5,7 @@ export async function GET(request: Request) {
         return Response.redirect("https://expel.best");
     }
     
-    const res = await fetch("https://api.expel.best/status", {
+    const res = await fetch("https://api.expel.best/bot/status", {
         method: "GET",
         headers: {
             Authorization: "Bearer NxyyS3cr3tK3y!!!?",
