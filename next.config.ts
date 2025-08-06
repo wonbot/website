@@ -1,13 +1,13 @@
 import type { NextConfig } from "next";
-import utwm from "unplugin-tailwindcss-mangle";
+import utwm from 'unplugin-tailwindcss-mangle';
 
 const nextConfig: NextConfig = {
   reactStrictMode: false,
   poweredByHeader: false,
   compress: true,
   webpack: (config) => {
-    config.plugins.push(utwm.webpack());
-    return config;
+    config.plugins.push(utwm.webpack())
+    return config
   },
   redirects: async () => {
     return [
@@ -44,8 +44,8 @@ const nextConfig: NextConfig = {
       "cdn.discordapp.com",
       "media.discordapp.net",
       "i.imgur.com",
-      "cdn.coffin.lol",
       "s3.expel.best",
+      "s3.expel.best"
     ],
   },
 };
