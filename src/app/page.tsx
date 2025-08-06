@@ -330,7 +330,7 @@ export default async function Home() {
                 <Button
                   size={{ initial: "3", sm: "4" }}
                   style={{
-                    backgroundColor: "#8faaa2",
+                    backgroundColor: "#938faaff",
                     color: "#1a1a1a",
                     border: "none",
                   }}
@@ -349,10 +349,10 @@ export default async function Home() {
                 <Button
                   size={{ initial: "3", sm: "4" }}
                   style={{
-                    backgroundColor: "rgba(143, 170, 162, 0.1)",
-                    color: "#a5c0b7",
+                    backgroundColor: "rgba(143, 155, 170, 0.1)",
+                    color: "#a5aec0ff",
                     backdropFilter: "blur(20px)",
-                    border: "1px solid rgba(143, 170, 162, 0.3)",
+                    border: "1px solid rgba(143, 154, 170, 0.3)",
                   }}
                   asChild
                 >
@@ -433,7 +433,7 @@ export default async function Home() {
               <Button
                 size={{ initial: "3", sm: "4" }}
                 style={{
-                  backgroundColor: "#8faaa2",
+                  backgroundColor: "#8f9faaff",
                   color: "#1a1a1a",
                   border: "none",
                 }}
