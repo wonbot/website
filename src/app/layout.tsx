@@ -1,4 +1,4 @@
-import "@/globals.css";
+import "@/app/globals.css";
 import "@radix-ui/themes/styles.css";
 import { Inter } from "next/font/google";
 import { MainNav } from "@/components/nav/MainNav";
