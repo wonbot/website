@@ -41,7 +41,7 @@ export function AvatarHistoryDisplay({
   const [avatars, setAvatars] = useState<AvatarData[]>(initialAvatars);
   const [isLoading, setIsLoading] = useState(!initialAvatars.length);
   const [username, setUsername] = useState<string | null>(
-    initialUsername || null,
+    initialUsername || null
   );
   const [selectedAvatar, setSelectedAvatar] = useState<AvatarData | null>(null);
   const [imageLoadStates, setImageLoadStates] = useState<
@@ -59,14 +59,14 @@ export function AvatarHistoryDisplay({
   const formatDate = (dateString: string) => {
     if (!dateString) return "";
     const date = new Date(dateString);
-    return new Intl.DateTimeFormat('en-US', {
-      month: 'short',
-      day: 'numeric',
-      year: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit',
-      second: '2-digit',
-      hour12: true
+    return new Intl.DateTimeFormat("en-US", {
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: true,
     }).format(date);
   };
 
@@ -150,46 +150,46 @@ export function AvatarHistoryDisplay({
           </div>
           <div className="flex items-center gap-2 flex-wrap">
             <div className="flex items-center gap-2">
-                <Button
+              <Button
                 style={{
-                  backgroundColor: "#8faaa2",
+                  backgroundColor: "#8faaaa",
                   color: "#1a1a1a",
                   border: "none",
                 }}
                 className="p-2"
                 disabled={page <= 1}
                 asChild={page > 1}
-                >
+              >
                 {page > 1 ? (
                   <Link href={`/avatarhistory/${userId}?p=${page - 1}`}>←</Link>
                 ) : (
                   <span>←</span>
                 )}
-                </Button>
-                <Button
+              </Button>
+              <Button
                 style={{
-                  backgroundColor: "#8faaa2",
+                  backgroundColor: "#8faaaa",
                   color: "#1a1a1a",
                   border: "none",
                 }}
                 className="p-2"
                 disabled={page >= Math.ceil(totalCount / 20)}
                 asChild={page < Math.ceil(totalCount / 20)}
-                >
+              >
                 {page < Math.ceil(totalCount / 20) ? (
                   <Link href={`/avatarhistory/${userId}?p=${page + 1}`}>→</Link>
                 ) : (
                   <span>→</span>
                 )}
-                </Button>
+              </Button>
             </div>
             <div className="flex items-center gap-2">
               <span className="opacity-10">•</span>
               <Button
                 style={{
-                  backgroundColor: "#8faaa2",
+                  backgroundColor: "#8faaaa",
                   color: "#1a1a1a",
-                  border: "none"
+                  border: "none",
                 }}
                 asChild
               >
@@ -250,17 +250,22 @@ export function AvatarHistoryDisplay({
                           onLoad={() => handleImageLoad(avatar.url)}
                           onError={() => handleImageError(avatar.url)}
                           style={{
-                            opacity: imageLoadStates[avatar.url] === "loaded" ? 1 : 0,
-                            transition: "all 0.2s cubic-bezier(0.4, 0, 0.2, 1)"
+                            opacity:
+                              imageLoadStates[avatar.url] === "loaded" ? 1 : 0,
+                            transition: "all 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
                           }}
                         />
-                        {imageLoadStates[avatar.url] === "loaded" && avatar.lastModified && (
-                          <div className="absolute inset-x-0 bottom-0 bg-background/50 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-700 rounded-b-lg border-t border-white/5">
-                            <Text size="1" className="text-white/90 text-center py-2">
-                              {formatDate(avatar.lastModified)}
-                            </Text>
-                          </div>
-                        )}
+                        {imageLoadStates[avatar.url] === "loaded" &&
+                          avatar.lastModified && (
+                            <div className="absolute inset-x-0 bottom-0 bg-background/50 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-700 rounded-b-lg border-t border-white/5">
+                              <Text
+                                size="1"
+                                className="text-white/90 text-center py-2"
+                              >
+                                {formatDate(avatar.lastModified)}
+                              </Text>
+                            </div>
+                          )}
                       </div>
                     )}
                   </button>
@@ -271,8 +276,14 @@ export function AvatarHistoryDisplay({
         )}
       </Box>
 
-      <Dialog.Root open={!!selectedAvatar} onOpenChange={() => setSelectedAvatar(null)}>
-        <Dialog.Content className="fixed inset-0 z-50 flex items-center justify-center data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out data-[state=open]:fade-in data-[state=closed]:slide-out-to-bottom-4 data-[state=open]:slide-in-from-bottom-4 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=open]:duration-700 data-[state=closed]:duration-300 !p-0 !overflow-hidden" style={{ maxWidth: "min(90vw, 600px)" }}>
+      <Dialog.Root
+        open={!!selectedAvatar}
+        onOpenChange={() => setSelectedAvatar(null)}
+      >
+        <Dialog.Content
+          className="fixed inset-0 z-50 flex items-center justify-center data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out data-[state=open]:fade-in data-[state=closed]:slide-out-to-bottom-4 data-[state=open]:slide-in-from-bottom-4 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=open]:duration-700 data-[state=closed]:duration-300 !p-0 !overflow-hidden"
+          style={{ maxWidth: "min(90vw, 600px)" }}
+        >
           <Dialog.Title className="sr-only">{username}'s Avatar</Dialog.Title>
           {selectedAvatar && (
             <AspectRatio ratio={1} style={{ maxHeight: "90vh" }}>
@@ -294,20 +305,36 @@ export function AvatarHistoryDisplay({
                       sizes="(max-width: 600px) 90vw, 600px"
                       priority
                       style={{
-                        opacity: imageLoadStates[selectedAvatar.url] === "loaded" ? 1 : 0
+                        opacity:
+                          imageLoadStates[selectedAvatar.url] === "loaded"
+                            ? 1
+                            : 0,
                       }}
                     />
                     <div className="absolute top-4 right-4 flex gap-2">
-                      <button onClick={() => copyImageLink(selectedAvatar.url)} className="p-2 rounded-lg bg-background/50 backdrop-blur-sm border border-white/10 transition-all hover:bg-white/10" title="Copy link">
+                      <button
+                        onClick={() => copyImageLink(selectedAvatar.url)}
+                        className="p-2 rounded-lg bg-background/50 backdrop-blur-sm border border-white/10 transition-all hover:bg-white/10"
+                        title="Copy link"
+                      >
                         <Link2Icon className="w-4 h-4 text-white/90" />
                       </button>
-                      <button onClick={() => downloadImage(selectedAvatar.url)} className="p-2 rounded-lg bg-background/50 backdrop-blur-sm border border-white/10 transition-all hover:bg-white/10" title="Download">
+                      <button
+                        onClick={() => downloadImage(selectedAvatar.url)}
+                        className="p-2 rounded-lg bg-background/50 backdrop-blur-sm border border-white/10 transition-all hover:bg-white/10"
+                        title="Download"
+                      >
                         <DownloadIcon className="w-4 h-4 text-white/90" />
                       </button>
                     </div>
                     {selectedAvatar.lastModified && (
                       <div className="absolute inset-x-0 bottom-0 bg-background/50 backdrop-blur-sm rounded-b-lg border-t-[2px] border-white/10">
-                        <Text size="2" className="text-white/90 text-left py-3 px-4">{formatDate(selectedAvatar.lastModified)}</Text>
+                        <Text
+                          size="2"
+                          className="text-white/90 text-left py-3 px-4"
+                        >
+                          {formatDate(selectedAvatar.lastModified)}
+                        </Text>
                       </div>
                     )}
                   </>

@@ -12,7 +12,7 @@ export default function PrivacyPage() {
         </div>
 
         <div className="glass-panel backdrop-blur-sm bg-background/50 p-6 space-y-8">
-          <p className="italic text-white/80 border-l-2 border-[#8faaa2]/30 pl-4 py-1">
+          <p className="italic text-white/80 border-l-2 border-[#8faaaa]/30 pl-4 py-1">
             Any information we collect is not used maliciously. If any
             information stated here seems/is misleading, please contact us
             immediately through our support server.
@@ -23,7 +23,7 @@ export default function PrivacyPage() {
               Information We Collect
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <ul className="list-disc list-inside space-y-1.5 marker:text-[#8faaa2]/70">
+              <ul className="list-disc list-inside space-y-1.5 marker:text-[#8faaaa]/70">
                 <li>Guild IDs</li>
                 <li>Guild Names</li>
                 <li>Channel IDs</li>
@@ -31,7 +31,7 @@ export default function PrivacyPage() {
                 <li>User IDs</li>
                 <li>Message Timestamps</li>
               </ul>
-              <ul className="list-disc list-inside space-y-1.5 marker:text-[#8faaa2]/70">
+              <ul className="list-disc list-inside space-y-1.5 marker:text-[#8faaaa]/70">
                 <li>Message IDs</li>
                 <li>Nicknames and Usernames</li>
                 <li className="text-pretty">
@@ -61,7 +61,7 @@ export default function PrivacyPage() {
                 maximum of 18 entries for edited messages and sniping messages
                 that will expire in two hours or less in volatile memory.
               </p>
-              <div className="pl-4 border-l-2 border-[#8faaa2]/20 space-y-3">
+              <div className="pl-4 border-l-2 border-[#8faaaa]/20 space-y-3">
                 <p className="text-white/90 leading-relaxed">
                   Guild IDs, Channel IDs, Role IDs, User IDs and Message IDs are
                   all stored for our system to aggregate values to find data.
@@ -80,7 +80,7 @@ export default function PrivacyPage() {
             </div>
           </section>
 
-          <section className="bg-[#8faaa2]/5 p-4 rounded-lg backdrop-blur-sm border border-[#8faaa2]/10">
+          <section className="bg-[#8faaaa]/5 p-4 rounded-lg backdrop-blur-sm border border-[#8faaaa]/10">
             <h2 className="text-2xl font-medium mb-4 text-gradient">
               Who is your collected information shared with?
             </h2>
@@ -97,7 +97,7 @@ export default function PrivacyPage() {
             <p className="text-white/90 leading-relaxed">
               Contact us through our support server to have your data deleted.
             </p>
-            <div className="mt-2 p-3 border border-[#8faaa2]/10 rounded-lg bg-[#8faaa2]/5 backdrop-blur-sm">
+            <div className="mt-2 p-3 border border-[#8faaaa]/10 rounded-lg bg-[#8faaaa]/5 backdrop-blur-sm">
               <p className="text-sm text-white/70">
                 Note: When requesting deletion, please be specific with what
                 information that you want gone and provide ownership of your
@@ -118,7 +118,7 @@ export default function PrivacyPage() {
             </p>
           </section>
 
-          <section className="bg-[#8faaa2]/5 p-4 rounded-lg backdrop-blur-sm border border-[#8faaa2]/10">
+          <section className="bg-[#8faaaa]/5 p-4 rounded-lg backdrop-blur-sm border border-[#8faaaa]/10">
             <h2 className="text-2xl font-medium mb-4 text-gradient">
               Changes to the Privacy Policy
             </h2>

@@ -118,7 +118,7 @@ export default function EmbedBuilder() {
   const [importText, setImportText] = useState("");
   const [form, setForm] = useState<EmbedForm>({
     content: "",
-    color: "#8faaa2",
+    color: "#8faaaa",
     author: {
       name: "",
       icon_url: "",
@@ -271,7 +271,7 @@ export default function EmbedBuilder() {
         <Grid columns={{ initial: "1", lg: "2" }} gap="6">
           <div className="space-y-6">
             <div className="glass-panel p-6 relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#8faaa2]/[0.07] to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#8faaaa]/[0.07] to-transparent" />
               <div className="relative z-10">
                 <div className="flex items-center justify-between mb-6">
                   <div>
@@ -285,14 +285,14 @@ export default function EmbedBuilder() {
                   <div className="space-y-1">
                     <button
                       onClick={() => setShowMarkdownGuide(true)}
-                      className="w-full flex items-center gap-2 px-3 py-1.5 rounded-md bg-[#8faaa2]/[0.07] backdrop-blur-sm border border-[#8faaa2]/10 text-white/90 hover:bg-[#8faaa2]/[0.12] transition-colors text-sm"
+                      className="w-full flex items-center gap-2 px-3 py-1.5 rounded-md bg-[#8faaaa]/[0.07] backdrop-blur-sm border border-[#8faaaa]/10 text-white/90 hover:bg-[#8faaaa]/[0.12] transition-colors text-sm"
                     >
                       <InfoCircledIcon className="w-4 h-4" />
                       Markdown Guide
                     </button>
                     <button
                       onClick={() => setShowVariablesGuide(true)}
-                      className="w-full flex items-center gap-2 px-3 py-1.5 rounded-md bg-[#8faaa2]/[0.07] backdrop-blur-sm border border-[#8faaa2]/10 text-white/90 hover:bg-[#8faaa2]/[0.12] transition-colors text-sm"
+                      className="w-full flex items-center gap-2 px-3 py-1.5 rounded-md bg-[#8faaaa]/[0.07] backdrop-blur-sm border border-[#8faaaa]/10 text-white/90 hover:bg-[#8faaaa]/[0.12] transition-colors text-sm"
                     >
                       <CopyIcon className="w-4 h-4" />
                       Variables
@@ -303,7 +303,7 @@ export default function EmbedBuilder() {
                 <div className="space-y-4">
                   <div className="glass-panel p-4 space-y-4">
                     <div>
-                      <label className="block text-sm font-medium text-[#8faaa2]/90 mb-1">
+                      <label className="block text-sm font-medium text-[#8faaaa]/90 mb-1">
                         Message Content
                       </label>
                       <TextArea
@@ -314,7 +314,7 @@ export default function EmbedBuilder() {
                             content: e.target.value,
                           }))
                         }
-                        className="w-full min-h-[80px] px-3 py-2 bg-[#8faaa2]/[0.07] backdrop-blur-sm rounded-lg border border-[#8faaa2]/10 focus:outline-none focus:border-[#8faaa2]/30 text-white resize-y placeholder:text-[#8faaa2]/40"
+                        className="w-full min-h-[80px] px-3 py-2 bg-[#8faaaa]/[0.07] backdrop-blur-sm rounded-lg border border-[#8faaaa]/10 focus:outline-none focus:border-[#8faaaa]/30 text-white resize-y placeholder:text-[#8faaaa]/40"
                         placeholder="Add a message above the embed..."
                       />
                     </div>
@@ -966,7 +966,7 @@ export default function EmbedBuilder() {
 
           <div className="lg:sticky lg:top-24 space-y-6">
             <div className="glass-panel p-6 relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#8faaa2]/[0.07] to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#8faaaa]/[0.07] to-transparent" />
               <div className="relative z-10">
                 <div className="flex flex-col sm:flex-row gap-3 mb-6">
                   <div className="grid grid-cols-3 gap-3 flex-1">

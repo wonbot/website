@@ -11,16 +11,18 @@ import { useState } from "react";
 import numeral from "numeral";
 
 const formatValue = (value: number) => {
-  return numeral(value).format('0.[0]a');
+  return numeral(value).format("0.[0]a");
 };
 
 const formatTime = (timestamp: string) => {
   const date = new Date(timestamp);
-  return date.toLocaleTimeString('en-US', {
-    hour: 'numeric',
-    minute: '2-digit',
-    hour12: true
-  }).toLowerCase();
+  return date
+    .toLocaleTimeString("en-US", {
+      hour: "numeric",
+      minute: "2-digit",
+      hour12: true,
+    })
+    .toLowerCase();
 };
 
 interface HistoryPoint {
@@ -61,30 +63,27 @@ const generateTimePoints = (hours: number) => {
 const fillMissingData = (
   data: HistoryPoint[],
   timeRange: TimeRange,
-  metric: "guild_count" | "total_members",
+  metric: "guild_count" | "total_members"
 ) => {
   const hours = TIME_RANGES[timeRange];
   const timePoints = generateTimePoints(hours);
   const sortedData = [...data].sort(
-    (a, b) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime(),
+    (a, b) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime()
   );
 
   return timePoints
     .map((timestamp) => {
       const pointTime = new Date(timestamp).getTime();
 
-      const closestPoint = sortedData.reduce(
-        (closest, current) => {
-          const currentDiff = Math.abs(
-            new Date(current.timestamp).getTime() - pointTime,
-          );
-          const closestDiff = closest
-            ? Math.abs(new Date(closest.timestamp).getTime() - pointTime)
-            : Infinity;
-          return currentDiff < closestDiff ? current : closest;
-        },
-        null as HistoryPoint | null,
-      );
+      const closestPoint = sortedData.reduce((closest, current) => {
+        const currentDiff = Math.abs(
+          new Date(current.timestamp).getTime() - pointTime
+        );
+        const closestDiff = closest
+          ? Math.abs(new Date(closest.timestamp).getTime() - pointTime)
+          : Infinity;
+        return currentDiff < closestDiff ? current : closest;
+      }, null as HistoryPoint | null);
 
       return {
         timestamp,
@@ -99,19 +98,25 @@ const CustomTooltip = ({ active, payload, label }: any) => {
     const currentValue = payload[0].value;
     const previousValue = payload[1]?.value;
     const change = previousValue ? currentValue - previousValue : 0;
-    const changePercent = previousValue ? ((change / previousValue) * 100).toFixed(1) : 0;
+    const changePercent = previousValue
+      ? ((change / previousValue) * 100).toFixed(1)
+      : 0;
 
     return (
-      <div className="glass-panel px-4 py-3 border-[#8faaa2]/20">
-        <p className="text-sm font-medium text-white/80">
-          {formatTime(label)}
-        </p>
+      <div className="glass-panel px-4 py-3 border-[#8faaaa]/20">
+        <p className="text-sm font-medium text-white/80">{formatTime(label)}</p>
         <p className="text-xl font-medium text-white mt-1">
           {currentValue.toLocaleString()}
         </p>
         {change !== 0 && (
-          <p className={cn("text-sm font-medium mt-1", change > 0 ? "text-emerald-400" : "text-red-400")}>
-            {change > 0 ? "↑" : "↓"} {Math.abs(change).toLocaleString()} ({changePercent}%)
+          <p
+            className={cn(
+              "text-sm font-medium mt-1",
+              change > 0 ? "text-emerald-400" : "text-red-400"
+            )}
+          >
+            {change > 0 ? "↑" : "↓"} {Math.abs(change).toLocaleString()} (
+            {changePercent}%)
           </p>
         )}
       </div>
@@ -139,7 +144,7 @@ export function AnalyticsGraph({
               className={cn(
                 "px-3 py-1.5 rounded-md text-sm font-medium transition-all duration-200",
                 timeRange === range
-                  ? "bg-[#8faaa2]/10 text-[#8faaa2] border-[#8faaa2]/20"
+                  ? "bg-[#8faaaa]/10 text-[#8faaaa] border-[#8faaaa]/20"
                   : "text-white/60 hover:text-white/80 hover:bg-white/5"
               )}
             >
@@ -157,8 +162,8 @@ export function AnalyticsGraph({
           >
             <defs>
               <linearGradient id="colorValue" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#8faaa2" stopOpacity={0.15} />
-                <stop offset="95%" stopColor="#8faaa2" stopOpacity={0.01} />
+                <stop offset="0%" stopColor="#8faaaa" stopOpacity={0.15} />
+                <stop offset="95%" stopColor="#8faaaa" stopOpacity={0.01} />
               </linearGradient>
             </defs>
             <XAxis
@@ -180,14 +185,14 @@ export function AnalyticsGraph({
             <Area
               type="monotone"
               dataKey="value"
-              stroke="#8faaa2"
+              stroke="#8faaaa"
               strokeWidth={1.5}
               fill="url(#colorValue)"
               dot={false}
               activeDot={{
                 r: 4,
                 fill: "#050505",
-                stroke: "#8faaa2",
+                stroke: "#8faaaa",
                 strokeWidth: 1.5,
               }}
             />

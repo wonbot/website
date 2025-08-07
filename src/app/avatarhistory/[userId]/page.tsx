@@ -11,21 +11,26 @@ interface AvatarData {
   lastModified: string;
 }
 
-const isDev = process.env.NODE_ENV === "development" && !process.env.DATABASE_URL;
+const isDev =
+  process.env.NODE_ENV === "development" && !process.env.DATABASE_URL;
 const ITEMS_PER_PAGE = 20;
 
 const MOCK_DATA = {
-  rows: [{
-    username: "Development User",
-    avatars: Array(25).fill({
-      url: "https://s3.expel.best/avatarhistory/5e0ruPsYZEFMWgsQ.png",
-      lastModified: new Date().toISOString(),
-    }),
-    totalCount: 25,
-  }],
+  rows: [
+    {
+      username: "Development User",
+      avatars: Array(25).fill({
+        url: "https://s3.expel.best/avatarhistory/5e0ruPsYZEFMWgsQ.png",
+        lastModified: new Date().toISOString(),
+      }),
+      totalCount: 25,
+    },
+  ],
 };
 
-const pool = isDev ? null : new Pool({ connectionString: process.env.DATABASE_URL });
+const pool = isDev
+  ? null
+  : new Pool({ connectionString: process.env.DATABASE_URL });
 
 async function getLastModified(url: string): Promise<string> {
   try {
@@ -38,13 +43,16 @@ async function getLastModified(url: string): Promise<string> {
 
 export async function generateMetadata({ params }: PageProps) {
   const { userId } = await params;
-  
+
   let username = "User";
   if (!isDev && pool) {
     try {
-      const result = await pool.query(`
+      const result = await pool.query(
+        `
         SELECT username FROM avh WHERE user_id = $1
-      `, [userId]);
+      `,
+        [userId]
+      );
       if (result?.rows?.[0]) {
         username = result.rows[0].username;
       }
@@ -58,7 +66,7 @@ export async function generateMetadata({ params }: PageProps) {
   return {
     title: `${username}'s Avatar History • Tempt`,
     description: "View avatar history for Discord users.",
-    themeColor: "#8faaa2",
+    themeColor: "#8faaaa",
     openGraph: {
       title: `${username}'s Avatar History • Tempt`,
       description: "View avatar history for Discord users.",
@@ -81,10 +89,13 @@ export async function generateMetadata({ params }: PageProps) {
   };
 }
 
-export default async function AvatarHistoryPage({ params, searchParams }: PageProps) {
+export default async function AvatarHistoryPage({
+  params,
+  searchParams,
+}: PageProps) {
   const [{ userId }, searchParamsResolved] = await Promise.all([
     params,
-    searchParams
+    searchParams,
   ]);
   const page = Math.max(1, parseInt(searchParamsResolved.p ?? "1"));
   let initialData = null;
@@ -93,19 +104,23 @@ export default async function AvatarHistoryPage({ params, searchParams }: PagePr
     initialData = MOCK_DATA;
   } else {
     try {
-      const countResult = await pool.query(`
+      const countResult = await pool.query(
+        `
         SELECT array_length(avatars, 1) as total_count
         FROM avh 
         WHERE user_id = $1
-      `, [userId]);
-      
+      `,
+        [userId]
+      );
+
       const totalCount = countResult.rows[0]?.total_count ?? 0;
       const offset = (page - 1) * ITEMS_PER_PAGE;
-      
+
       const startIndex = Math.max(1, totalCount - offset - ITEMS_PER_PAGE + 1);
       const endIndex = totalCount - offset;
-      
-      const result = await pool.query(`
+
+      const result = await pool.query(
+        `
         WITH user_data AS (
           SELECT username, avatars
           FROM avh 
@@ -117,7 +132,9 @@ export default async function AvatarHistoryPage({ params, searchParams }: PagePr
             SELECT unnest(avatars[$2:$3])
           ) as page_avatars
         FROM user_data
-      `, [userId, startIndex, endIndex]);
+      `,
+        [userId, startIndex, endIndex]
+      );
 
       if (!result?.rows?.[0]) throw new Error("User not found");
 
@@ -128,16 +145,20 @@ export default async function AvatarHistoryPage({ params, searchParams }: PagePr
         }))
       );
 
-      avatarsWithDates.sort((a, b) => 
-        new Date(b.lastModified).getTime() - new Date(a.lastModified).getTime()
+      avatarsWithDates.sort(
+        (a, b) =>
+          new Date(b.lastModified).getTime() -
+          new Date(a.lastModified).getTime()
       );
 
       initialData = {
-        rows: [{
-          username: result.rows[0].username,
-          avatars: avatarsWithDates,
-          totalCount,
-        }],
+        rows: [
+          {
+            username: result.rows[0].username,
+            avatars: avatarsWithDates,
+            totalCount,
+          },
+        ],
       };
     } catch (error) {
       console.error("Database error:", error);
@@ -151,7 +172,9 @@ export default async function AvatarHistoryPage({ params, searchParams }: PagePr
     <main className="min-h-screen pt-24 pb-16 px-4">
       <div className="max-w-5xl mx-auto">
         <div className="mb-8">
-          <h1 className="text-4xl font-medium text-gradient mb-2">Avatar History</h1>
+          <h1 className="text-4xl font-medium text-gradient mb-2">
+            Avatar History
+          </h1>
           <p className="text-muted-foreground">
             {initialData?.rows?.[0]?.username
               ? `View ${initialData.rows[0].username}'s previous Discord avatars`

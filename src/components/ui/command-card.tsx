@@ -85,8 +85,8 @@ export function CommandCard({ command, isLoading }: CommandCardProps) {
           isExpanded
             ? "ring-1 ring-white/10"
             : hasContent
-              ? "hover:bg-background/60"
-              : ""
+            ? "hover:bg-background/60"
+            : ""
         }
       `}
       onClick={() => (hasContent ? setIsExpanded(!isExpanded) : null)}
@@ -177,8 +177,8 @@ export function CommandCard({ command, isLoading }: CommandCardProps) {
                             className={cn(
                               "text-xs px-2.5 py-1 rounded-full backdrop-blur-sm transition-colors",
                               param.required
-                                ? "bg-[#8faaa2]/10 text-[#8faaa2] border border-[#8faaa2]/20 shadow-[#8faaa2]/5 shadow-sm"
-                                : "bg-white/5 text-white/60 border border-white/10",
+                                ? "bg-[#8faaaa]/10 text-[#8faaaa] border border-[#8faaaa]/20 shadow-[#8faaaa]/5 shadow-sm"
+                                : "bg-white/5 text-white/60 border border-white/10"
                             )}
                           >
                             {param.required ? "Required" : "Optional"}

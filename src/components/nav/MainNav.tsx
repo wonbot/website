@@ -24,10 +24,10 @@ export function MainNav() {
           className={`
             dynamic-island relative flex items-center gap-1 px-2 overflow-hidden
             transition-all duration-500 ease-spring
-            bg-gradient-to-br from-[#8faaa2]/[0.07] to-transparent
-            backdrop-blur-lg border border-[#8faaa2]/10
+            bg-gradient-to-br from-[#8faaaa]/[0.07] to-transparent
+            backdrop-blur-lg border border-[#8faaaa]/10
             [box-shadow:0_0_0_1px_rgba(103,145,229,0.05),0_2px_4px_rgba(103,145,229,0.05)]
-            dark:bg-background/30 dark:border-[#8faaa2]/[0.1]
+            dark:bg-background/30 dark:border-[#8faaaa]/[0.1]
             dark:[box-shadow:0_-20px_80px_-20px_rgba(103,145,229,0.05)_inset]
             ${
               isScrolled
@@ -49,7 +49,7 @@ export function MainNav() {
             <img
               src="https://s3.expel.best/min/av.png"
               alt="Tempt Bot"
-              className="w-6 h-6 sm:w-7 sm:h-7 rounded-full ring-2 ring-[#8faaa2]/20"
+              className="w-6 h-6 sm:w-7 sm:h-7 rounded-full ring-2 ring-[#8faaaa]/20"
             />
           </div>
 
@@ -134,8 +134,8 @@ export function MainNav() {
               >
                 <span className="relative z-10 flex items-center gap-1 sm:gap-2">
                   <div className="relative flex w-1.5 sm:w-2 h-1.5 sm:h-2 shrink-0">
-                    <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-[#8faaa2]" />
-                    <div className="absolute inset-0 w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-[#8faaa2] animate-ping opacity-75" />
+                    <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-[#8faaaa]" />
+                    <div className="absolute inset-0 w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-[#8faaaa] animate-ping opacity-75" />
                   </div>
                   <span
                     className={`transition-transform duration-200 ${
@@ -160,7 +160,7 @@ export function MainNav() {
                   href="https://discord.gg/won"
                   className={`
                     relative inline-flex items-center justify-center
-                    bg-gradient-to-r from-[#8faaa2] to-[#3f5c53] text-white
+                    bg-gradient-to-r from-[#8faaaa] to-[#3f5c53] text-white
                     transition-all duration-300 ease-in-out overflow-hidden
                     hover:brightness-110 hover:scale-[0.98]
                     ${
@@ -229,7 +229,7 @@ export function MainNav() {
               </HoverCard.Trigger>
               <HoverCard.Portal>
                 <HoverCard.Content
-                  className="bg-gradient-to-br from-[#8faaa2]/[0.07] to-transparent backdrop-blur-lg border border-[#8faaa2]/10 p-3 sm:p-4 w-[280px] sm:w-[300px]  animate-fade-in rounded-xl"
+                  className="bg-gradient-to-br from-[#8faaaa]/[0.07] to-transparent backdrop-blur-lg border border-[#8faaaa]/10 p-3 sm:p-4 w-[280px] sm:w-[300px]  animate-fade-in rounded-xl"
                   sideOffset={8}
                 >
                   <div className="space-y-2">
@@ -241,7 +241,7 @@ export function MainNav() {
                       users.
                     </p>
                   </div>
-                  <HoverCard.Arrow className="fill-[#8faaa2]/10" />
+                  <HoverCard.Arrow className="fill-[#8faaaa]/10" />
                 </HoverCard.Content>
               </HoverCard.Portal>
             </HoverCard.Root>

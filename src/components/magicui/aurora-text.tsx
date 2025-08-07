@@ -13,7 +13,7 @@ interface AuroraTextProps {
 export function AuroraText({
   children,
   className = "",
-  colors = ["#8faaa2", "#4671c6", "#2d4374", "#3e5692", "#1e3163"],
+  colors = ["#8faaaa", "#4671c6", "#2d4374", "#3e5692", "#1e3163"],
   speed = 1,
 }: AuroraTextProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -123,7 +123,7 @@ export function AuroraText({
           0,
           x,
           y,
-          canvas.width * 0.4,
+          canvas.width * 0.4
         );
 
         gradient.addColorStop(0, `${color}99`);

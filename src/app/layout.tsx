@@ -1,12 +1,17 @@
 import "@/app/globals.css";
 import "@radix-ui/themes/styles.css";
-import { Inter } from "next/font/google";
+import { Inter, Unbounded } from "next/font/google";
 import { MainNav } from "@/components/nav/MainNav";
 import { Theme } from "@radix-ui/themes";
 import { Toaster } from "sonner";
 import { GradientContainer } from "@/components/ui/gradient-container";
 
 const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const unbounded = Unbounded({
   subsets: ["latin"],
   display: "swap",
 });
@@ -53,7 +58,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.className}>
+    <html lang="en" className={unbounded.className}>
       <body className="min-h-screen antialiased bg-[#406258b7]">
         <Theme
           appearance="dark"

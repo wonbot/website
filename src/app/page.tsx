@@ -89,14 +89,14 @@ const features = [
     className: "col-span-3 lg:col-span-2",
     background: (
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#8faaa2]/5 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#8faaaa]/5 via-transparent to-transparent" />
         <div className="absolute inset-x-0 top-8 grid grid-cols-2 gap-3 px-4 [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)]">
           {modCommands.map((cmd, idx) => (
             <div
               key={idx}
-              className="relative cursor-pointer overflow-hidden rounded-xl border border-[#8faaa2]/10 bg-[#8faaa2]/[0.02] p-3 transform-gpu blur-[0.2px] transition-all duration-300 ease-out hover:blur-none hover:bg-[#8faaa2]/[0.05] hover:scale-[1.02]"
+              className="relative cursor-pointer overflow-hidden rounded-xl border border-[#8faaaa]/10 bg-[#8faaaa]/[0.02] p-3 transform-gpu blur-[0.2px] transition-all duration-300 ease-out hover:blur-none hover:bg-[#8faaaa]/[0.05] hover:scale-[1.02]"
             >
-              <code className="text-sm font-mono text-[#8faaa2]/90 block mb-2">
+              <code className="text-sm font-mono text-[#8faaaa]/90 block mb-2">
                 ,{cmd.name}
               </code>
               <p className="text-xs text-muted-foreground/80 line-clamp-2">
@@ -118,12 +118,12 @@ const features = [
     className: "col-span-3 lg:col-span-1",
     background: (
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#8faaa2]/5 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#8faaaa]/5 via-transparent to-transparent" />
         <div className="absolute inset-x-0 top-8 flex flex-col gap-3 px-4 [mask-image:linear-gradient(to_top,transparent_30%,#000_100%)]">
           {lastFmStats.map((stat, idx) => (
             <div
               key={idx}
-              className="flex items-center gap-3 p-2 rounded-lg border border-[#8faaa2]/10 bg-[#8faaa2]/[0.02] transform-gpu blur-[0.2px] transition-all duration-300 ease-out hover:blur-none hover:bg-[#8faaa2]/[0.05]"
+              className="flex items-center gap-3 p-2 rounded-lg border border-[#8faaaa]/10 bg-[#8faaaa]/[0.02] transform-gpu blur-[0.2px] transition-all duration-300 ease-out hover:blur-none hover:bg-[#8faaaa]/[0.05]"
             >
               <img
                 src={stat.image}
@@ -131,7 +131,7 @@ const features = [
                 className="w-10 h-10 rounded-md opacity-90"
               />
               <div className="flex-1 min-w-0">
-                <div className="text-sm font-medium text-[#8faaa2]/90 truncate">
+                <div className="text-sm font-medium text-[#8faaaa]/90 truncate">
                   {stat.artist}
                 </div>
                 <div className="text-xs text-muted-foreground/80">
@@ -153,18 +153,18 @@ const features = [
     className: "col-span-3 lg:col-span-1",
     background: (
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#8faaa2]/5 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#8faaaa]/5 via-transparent to-transparent" />
         <div className="absolute top-8 inset-x-0 px-4 [mask-image:linear-gradient(to_top,transparent_30%,#000_100%)]">
-          <div className="p-3 rounded-lg border border-[#8faaa2]/10 bg-[#8faaa2]/[0.02] transform-gpu blur-[0.2px] transition-all duration-300 ease-out hover:blur-none hover:bg-[#8faaa2]/[0.05]">
+          <div className="p-3 rounded-lg border border-[#8faaaa]/10 bg-[#8faaaa]/[0.02] transform-gpu blur-[0.2px] transition-all duration-300 ease-out hover:blur-none hover:bg-[#8faaaa]/[0.05]">
             <div className="flex items-center justify-between mb-3">
-              <div className="text-sm font-medium text-[#8faaa2]/90">
+              <div className="text-sm font-medium text-[#8faaaa]/90">
                 nxyy's channel
               </div>
-              <button className="p-1 rounded-md hover:bg-[#8faaa2]/10">
+              <button className="p-1 rounded-md hover:bg-[#8faaaa]/10">
                 <GearIcon
                   width="16"
                   height="16"
-                  className="text-[#8faaa2]/70"
+                  className="text-[#8faaaa]/70"
                 />
               </button>
             </div>
@@ -177,7 +177,7 @@ const features = [
                   <span className="text-muted-foreground/80">
                     {setting.name}
                   </span>
-                  <span className="text-[#8faaa2]/80">{setting.value}</span>
+                  <span className="text-[#8faaaa]/80">{setting.value}</span>
                 </div>
               ))}
             </div>
@@ -195,18 +195,18 @@ const features = [
     className: "col-span-3 lg:col-span-2",
     background: (
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#8faaa2]/5 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#8faaaa]/5 via-transparent to-transparent" />
         <div className="absolute top-8 inset-x-0 px-4 [mask-image:linear-gradient(to_top,transparent_30%,#000_100%)]">
           <div className="grid grid-cols-2 gap-3">
             {configOptions.map((option, idx) => (
               <div
                 key={idx}
-                className="p-3 rounded-lg border border-[#8faaa2]/10 bg-[#8faaa2]/[0.02] transform-gpu blur-[0.2px] transition-all duration-300 ease-out hover:blur-none hover:bg-[#8faaa2]/[0.05]"
+                className="p-3 rounded-lg border border-[#8faaaa]/10 bg-[#8faaaa]/[0.02] transform-gpu blur-[0.2px] transition-all duration-300 ease-out hover:blur-none hover:bg-[#8faaaa]/[0.05]"
               >
                 <div className="text-xs font-medium text-muted-foreground/80 mb-1">
                   {option.name}
                 </div>
-                <div className="text-sm text-[#8faaa2]/90">{option.value}</div>
+                <div className="text-sm text-[#8faaaa]/90">{option.value}</div>
               </div>
             ))}
           </div>
