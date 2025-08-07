@@ -30,10 +30,10 @@ export function MeshGradient() {
       className="absolute inset-0 w-full h-full transition-all duration-500"
       style={
         {
-          "--gradient-color-1": "#3d4256ff",
-          "--gradient-color-2": "#5b6476ff",
-          "--gradient-color-3": "#485466ff",
-          "--gradient-color-4": "#2d3543ff",
+          "--gradient-color-1": "#3d5652",
+          "--gradient-color-2": "#5b7671",
+          "--gradient-color-3": "#486661",
+          "--gradient-color-4": "#2d4340",
           opacity,
           filter: blur,
         } as React.CSSProperties
