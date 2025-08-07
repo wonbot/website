@@ -64,11 +64,11 @@ export async function generateMetadata({ params }: PageProps) {
   }
 
   return {
-    title: `${username}'s Avatar History • Tempt`,
+    title: `${username}'s Avatar History • Expel`,
     description: "View avatar history for Discord users.",
     themeColor: "#8faaaa",
     openGraph: {
-      title: `${username}'s Avatar History • Tempt`,
+      title: `${username}'s Avatar History • Expel`,
       description: "View avatar history for Discord users.",
       url: `https://expel.best/avatarhistory/${userId}`,
       images: [
@@ -76,13 +76,13 @@ export async function generateMetadata({ params }: PageProps) {
           url: "https://s3.expel.best/min/av.png",
           width: 512,
           height: 512,
-          alt: "Tempt Bot Logo",
+          alt: "Expel Logo",
         },
       ],
     },
     twitter: {
       card: "summary",
-      title: `${username}'s Avatar History • Tempt`,
+      title: `${username}'s Avatar History • Expel`,
       description: "View avatar history for Discord users.",
       images: ["https://s3.expel.best/min/av.png"],
     },
