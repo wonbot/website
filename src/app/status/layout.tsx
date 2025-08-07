@@ -23,7 +23,7 @@ export const metadata = {
 };
 
 export const viewport = {
-  themeColor: "#8f9eaaff",
+  themeColor: "#536a80",
 }
 
 export default function StatusLayout({

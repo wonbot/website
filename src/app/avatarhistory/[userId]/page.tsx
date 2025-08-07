@@ -66,7 +66,7 @@ export async function generateMetadata({ params }: PageProps) {
   return {
     title: `${username}'s Avatar History • Expel`,
     description: "View avatar history for Discord users.",
-    themeColor: "#8faaaa",
+    themeColor: "#536a80",
     openGraph: {
       title: `${username}'s Avatar History • Expel`,
       description: "View avatar history for Discord users.",

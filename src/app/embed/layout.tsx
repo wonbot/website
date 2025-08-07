@@ -25,7 +25,7 @@ export const metadata = {
   },
 };
 export const viewport = {
-  themeColor: "#8f9faaff",
+  themeColor: "#536a80",
 };
 
 export default function EmbedLayout({
