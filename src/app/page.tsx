@@ -262,7 +262,6 @@ async function getGuilds() {
     });
     const guilds = await res.json();
 
-    console.log("guilds:", guilds);
 
     if (!Array.isArray(guilds)) {
       console.error("guilds is not an array:", guilds);
