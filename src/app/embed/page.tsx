@@ -64,7 +64,7 @@ const variables = {
   "{user.name}": "Expel",
   "{user.id}": "1401621103700607087",
   "{member.id}": "1401621103700607087",
-  "{member.name}": "Tempt",
+  "{member.name}": "Expel",
   "{user.avatar}":
     "https://cdn.discordapp.com/avatars/427856906399154196/a_d4b8d0d355555555.png",
   "{member.avatar}":
@@ -73,7 +73,7 @@ const variables = {
   "{member.joined_at}": "March 15, 2024",
   "{user.created_at}": "March 10, 2023",
   "{member.created_at}": "March 10, 2023",
-  "{guild.name}": "Tempt Bot",
+  "{guild.name}": "Expel Bot",
   "{guild.count}": "15234",
   "{guild.count.format}": "15,234",
   "{guild.id}": "1271901054988058644",
