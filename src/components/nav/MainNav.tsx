@@ -48,7 +48,7 @@ export function MainNav() {
           >
             <img
               src="https://s3.expel.best/min/av.png"
-              alt="Tempt Bot"
+              alt="Expel Bot"
               className="w-6 h-6 sm:w-7 sm:h-7 rounded-full ring-2 ring-[#8faaaa]/20"
             />
           </div>
