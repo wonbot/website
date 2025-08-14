@@ -1,9 +1,9 @@
 export const metadata = {
   title: "Expel | Status",
-  description: "Check the current status and uptime of Tempt Bot.",
+  description: "Check the current status and uptime of Expel Bot.",
   openGraph: {
     title: "Expel | Status",
-    description: "Check the current status and uptime of Tempt Bot.",
+    description: "Check the current status and uptime of Expel Bot.",
     url: "https://expel.best/status",
     images: [
       {
@@ -17,7 +17,7 @@ export const metadata = {
   twitter: {
     card: "summary",
     title: "Expel | Status",
-    description: "Check the current status and uptime of Tempt Bot.",
+    description: "Check the current status and uptime of Expel Bot.",
     images: ["https://s3.expel.best/min/av.png"],
   },
 };

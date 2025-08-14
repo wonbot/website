@@ -13,11 +13,11 @@ export default function TermsPage() {
 
         <div className="glass-panel backdrop-blur-sm bg-background/50 p-6 space-y-8">
           <p className="text-white/90 leading-relaxed">
-            By visiting ("Tempt") or inviting ("Tempt Bot") to your Discord
+            By visiting ("expel.best") or inviting ("Expel Bot") to your Discord
             server or logging into our website, you agree and consent to the
             terms displayed on this page including our policies (Privacy
-            Policy). When we state "Tempt," "we," "us," and "our" in these
-            terms, we mean Tempt. "Services" mean Tempt's services that we offer
+            Policy). When we state "Expel," "we," "us," and "our" in these
+            terms, we mean Expel. "Services" mean Expel's services that we offer
             to users.
           </p>
 
@@ -31,7 +31,7 @@ export default function TermsPage() {
               Disclaimer
             </h2>
             <p className="text-white/90 leading-relaxed">
-              You may not use Tempt to violate any applicable laws or
+              You may not use Expel to violate any applicable laws or
               regulations as well as Discord's Terms of Service and Community
               Guidelines. If you encounter individuals or communities doing so,
               please contact us through our support server. If you are refunded
@@ -54,7 +54,7 @@ export default function TermsPage() {
               <li>Scraping content on this website for malicious use</li>
               <li>Framing a portion or all of the website</li>
               <li>
-                Plagiarize Tempt's website and claiming it as your own work
+                Plagiarize Expel's website and claiming it as your own work
               </li>
             </ul>
           </section>
@@ -68,14 +68,14 @@ export default function TermsPage() {
             </p>
             <ul className="list-disc list-inside space-y-1.5 marker:text-[#8faaaa]/70 text-white/90">
               <li>Violate the Discord Terms of Service</li>
-              <li>Plagiarize Tempt's services or features</li>
+              <li>Plagiarize Expel's services or features</li>
               <li>
-                Assist anyone in plagiarizing Tempt's services or features
+                Assist anyone in plagiarizing Expel's services or features
               </li>
-              <li>Abuse or exploit Tempt or any of our services</li>
+              <li>Abuse or exploit Expel or any of our services</li>
               <li>Run a Discord Server that has been terminated repeatedly</li>
               <li>
-                Organize any "raid" or witch-hunt on Tempt itself or its staff
+                Organize any "raid" or witch-hunt on Expel itself or its staff
               </li>
             </ul>
           </section>

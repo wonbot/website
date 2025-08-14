@@ -265,7 +265,7 @@ export default function StatusPage() {
             {history && (
               <div className="mt-10">
                 <div className="glass-panel backdrop-blur-sm bg-background/50 p-6 border-2 rounded-3xl border-[#8faaaa]/20">
-                  <h3 className="text-xl font-semibold mb-6">Tempt's growth</h3>
+                  <h3 className="text-xl font-semibold mb-6">Expel's growth</h3>
 
                   <div className="mb-8">
                     <h4 className="text-neutral-400 text-sm font-medium mb-4">

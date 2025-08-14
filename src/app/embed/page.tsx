@@ -1015,7 +1015,7 @@ export default function EmbedBuilder() {
                       className="w-10 h-10 rounded-full"
                     />
                     <div className="flex items-center gap-1.5">
-                      <span className="text-white font-medium">Tempt</span>
+                      <span className="text-white font-medium">Expel</span>
                       <div className="flex items-center bg-[#5865F2] text-white text-xs font-medium px-1 rounded">
                         <svg
                           className="w-3.5 h-3.5 mr-0.5"
