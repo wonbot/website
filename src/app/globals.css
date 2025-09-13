@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --font-sans: "Unbounded", system-ui, -apple-system, sans-serif;
+    --font-unbounded: "Unbounded", system-ui, -apple-system, sans-serif;
     --background: 0 0% 0%;
     --foreground: 0 0% 98%;
     --card: 0 0% 3%;

@@ -7,87 +7,88 @@ import { Toaster } from "sonner";
 import { GradientContainer } from "@/components/ui/gradient-container";
 
 const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
+	subsets: ["latin"],
+	display: "swap",
 });
 
 const unbounded = Unbounded({
-  subsets: ["latin"],
-  display: "swap",
+	subsets: ["latin"],
+	display: "swap",
 });
 
 export const metadata = {
-  title: "Expel",
-  description:
-    "An aesthetic, all-in-one bot that suits all your server's needs.",
-  openGraph: {
-    title: "Expel",
-    description:
-      "An aesthetic, all-in-one bot that suits all your server's needs.",
-    url: "https://expel.best",
-    images: [
-      {
-        url: "https://api.expel.best/bot/avatar",
-        width: 512,
-        height: 512,
-        alt: "Expel Logo",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary",
-    title: "Expel",
-    description:
-      "An aesthetic, all-in-one bot that suits all your server's needs.",
-    images: ["https://api.expel.best/bot/avatar"],
-  },
-  icons: {
-    icon: "https://api.expel.best/bot/avatar",
-    shortcut: "https://api.expel.best/bot/avatar",
-    apple: "https://api.expel.best/bot/avatar",
-  },
+	title: "Expel",
+	description:
+		"An aesthetic, all-in-one bot that suits all your server's needs.",
+	openGraph: {
+		title: "Expel",
+		description:
+			"An aesthetic, all-in-one bot that suits all your server's needs.",
+		url: "https://expel.best",
+		images: [
+			{
+				url: "https://api.expel.best/bot/avatar",
+				width: 512,
+				height: 512,
+				alt: "Expel Logo",
+			},
+		],
+		locale: "en_US",
+		type: "website",
+	},
+	twitter: {
+		card: "summary",
+		title: "Expel",
+		description:
+			"An aesthetic, all-in-one bot that suits all your server's needs.",
+		images: ["https://api.expel.best/bot/avatar"],
+	},
+	icons: {
+		icon: "https://api.expel.best/bot/avatar",
+		shortcut: "https://api.expel.best/bot/avatar",
+		apple: "https://api.expel.best/bot/avatar",
+	},
 };
 export const viewport = {
-  themeColor: "#536a80",
-}
+	themeColor: "#536380",
+};
 export default function RootLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode;
+	children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en" className={unbounded.className}>
-      <body className="min-h-screen antialiased bg-[#406258b7]">
-        <Theme
-          appearance="dark"
-          accentColor="jade"
-          grayColor="slate"
-          scaling="100%"
-        >
-          <GradientContainer />
+	return (
+		<html lang="en" className={unbounded.className}>
+			<body className="min-h-screen antialiased bg-[#3764a2b7]">
+				<Theme
+					appearance="dark"
+					accentColor="jade"
+					grayColor="slate"
+					scaling="100%"
+				>
+					<GradientContainer />
 
-          <div className="relative z-10">
-            <MainNav />
-            {children}
-          </div>
-          <Toaster
-            theme="dark"
-            position="top-right"
-            richColors
-            toastOptions={{
-              style: {
-                background: "rgba(17, 17, 17, 0.7)",
-                backdropFilter: "blur(10px)",
-                border: "1px solid rgba(255, 255, 255, 0.1)",
-                color: "#fff",
-              },
-              className: "glass-panel select-none",
-            }}
-          />
-        </Theme>
-      </body>
-    </html>
-  );
+					<div className="relative z-10">
+						<MainNav />
+						{children}
+					</div>
+					<Toaster
+						theme="dark"
+						position="top-right"
+						richColors
+						toastOptions={{
+							style: {
+								background: "rgba(17, 17, 17, 0.7)",
+								backdropFilter: "blur(10px)",
+								border: "1px solid rgba(255, 255, 255, 0.1)",
+								color: "#fff",
+							},
+							className: "glass-panel select-none",
+						}}
+					/>
+				</Theme>
+			</body>
+		</html>
+	);
 }
+

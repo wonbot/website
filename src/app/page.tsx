@@ -329,7 +329,7 @@ export default async function Home() {
                 <Button
                   size={{ initial: "3", sm: "4" }}
                   style={{
-                    backgroundColor: "#938faaff",
+                    backgroundColor: "#5b7f9c",
                     color: "#1a1a1a",
                     border: "none",
                   }}
