@@ -65,13 +65,13 @@ const config: Config = {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-subtle":
-          "linear-gradient(to bottom right, rgba(103, 145, 229, 0.05), rgba(45, 67, 116, 0.02))",
+          "linear-gradient(to bottom right, rgba(103, 158, 229, 0.05), rgba(45, 82, 116, 0.02))",
         "gradient-card":
-          "linear-gradient(to bottom, rgba(45, 67, 116, 0.5), rgba(30, 49, 99, 0.5))",
+          "linear-gradient(to bottom, rgba(45, 78, 116, 0.5), rgba(30, 58, 99, 0.5))",
       },
       boxShadow: {
         island:
-          "0 0 0 1px rgba(39, 39, 42, 0.5), 0 8px 32px -8px rgba(0, 0, 0, 0.5)",
+          "0 0 0 1px rgba(39, 40, 42, 0.5), 0 8px 32px -8px rgba(0, 0, 0, 0.5)",
       },
       keyframes: {
         "fade-in": {
