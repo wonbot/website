@@ -9,7 +9,7 @@ export const metadata = {
     url: "https://expel.best/embed",
     images: [
       {
-        url: "https://s3.expel.best/min/av.png",
+        url: "https://api.expel.best/bot/avatar",
         width: 512,
         height: 512,
         alt: "Expel Logo",
@@ -21,7 +21,7 @@ export const metadata = {
     title: "Expel | Embed Builder",
     description:
       "Create and customize Discord embeds with our easy-to-use embed builder.",
-    images: ["https://s3.expel.best/min/av.png"],
+    images: ["https://api.expel.best/bot/avatar"],
   },
 };
 export const viewport = {

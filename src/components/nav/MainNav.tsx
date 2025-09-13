@@ -1,6 +1,7 @@
 "use client";
 import * as React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import * as HoverCard from "@radix-ui/react-hover-card";
 import { usePathname } from "next/navigation";
@@ -46,8 +47,8 @@ export function MainNav() {
             }
           `}
           >
-            <img
-              src="https://s3.expel.best/min/av.png"
+            <Image
+              src="https://api.expel.best/bot/avatar"
               alt="Expel Bot"
               className="w-6 h-6 sm:w-7 sm:h-7 rounded-full ring-2 ring-[#8faaaa]/20"
             />

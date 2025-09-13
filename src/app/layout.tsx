@@ -27,7 +27,7 @@ export const metadata = {
     url: "https://expel.best",
     images: [
       {
-        url: "https://s3.expel.best/min/av.png",
+        url: "https://api.expel.best/bot/avatar",
         width: 512,
         height: 512,
         alt: "Expel Logo",
@@ -41,12 +41,12 @@ export const metadata = {
     title: "Expel",
     description:
       "An aesthetic, all-in-one bot that suits all your server's needs.",
-    images: ["https://s3.expel.best/min/av.png"],
+    images: ["https://api.expel.best/bot/avatar"],
   },
   icons: {
-    icon: "https://s3.expel.best/min/av.png",
-    shortcut: "https://s3.expel.best/min/av.png",
-    apple: "https://s3.expel.best/min/av.png",
+    icon: "https://api.expel.best/bot/avatar",
+    shortcut: "https://api.expel.best/bot/avatar",
+    apple: "https://api.expel.best/bot/avatar",
   },
 };
 export const viewport = {

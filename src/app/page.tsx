@@ -237,7 +237,7 @@ const testimonialData: TestimonialType[] = [
 ];
 
 async function getStats() {
-  const res = await fetch("https://s3.expel.best/min/stats.json", {
+  const res = await fetch("https://r2.expel.best/min/stats.json", {
     next: { revalidate: 60 },
   });
   const data = await res.json();
@@ -310,7 +310,7 @@ export default async function Home() {
             >
               <div className="text-center space-y-2 w-full">
                 <Image
-                  src="https://s3.expel.best/min/av.png"
+                  src="https://api.expel.best/bot/avatar"
                   alt="Bot Avatar"
                   width={96}
                   height={96}

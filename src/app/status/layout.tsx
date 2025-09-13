@@ -7,7 +7,7 @@ export const metadata = {
     url: "https://expel.best/status",
     images: [
       {
-        url: "https://s3.expel.best/min/av.png",
+        url: "https://api.expel.best/bot/avatar",
         width: 512,
         height: 512,
         alt: "Expel Logo",
@@ -18,7 +18,7 @@ export const metadata = {
     card: "summary",
     title: "Expel | Status",
     description: "Check the current status and uptime of Expel Bot.",
-    images: ["https://s3.expel.best/min/av.png"],
+    images: ["https://api.expel.best/bot/avatar"],
   },
 };
 

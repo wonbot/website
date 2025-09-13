@@ -25,6 +25,7 @@ import * as Collapsible from "@radix-ui/react-collapsible";
 import { toast } from "sonner";
 import tinycolor from "tinycolor2";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 interface EmbedForm {
   content?: string;
@@ -1009,8 +1010,8 @@ export default function EmbedBuilder() {
 
                 <div className="bg-[#36393f] rounded-lg p-4">
                   <div className="flex items-center gap-2 mb-2">
-                    <img
-                      src="https://s3.expel.best/min/av.png"
+                    <Image
+                      src="https://api.expel.best/bot/avatar"
                       alt="Bot Avatar"
                       className="w-10 h-10 rounded-full"
                     />
@@ -1060,7 +1061,7 @@ export default function EmbedBuilder() {
                       {form.author?.name && (
                         <div className="flex items-center gap-2">
                           {form.author.icon_url && (
-                            <img
+                            <Image
                               src={replaceVariables(form.author.icon_url)}
                               alt=""
                               className="w-6 h-6 rounded-full"
@@ -1118,7 +1119,7 @@ export default function EmbedBuilder() {
                       )}
 
                       {form.image && (
-                        <img
+                        <Image
                           src={replaceVariables(form.image)}
                           alt=""
                           className="rounded-md max-w-full h-auto mt-2"
@@ -1128,7 +1129,7 @@ export default function EmbedBuilder() {
                       {form.footer?.text && (
                         <div className="flex items-center gap-2 mt-4 pt-4 border-t border-[#ffffff1a]">
                           {form.footer.icon_url && (
-                            <img
+                            <Image
                               src={replaceVariables(form.footer.icon_url)}
                               alt=""
                               className="w-5 h-5 rounded-full"

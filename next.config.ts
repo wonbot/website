@@ -44,8 +44,8 @@ const nextConfig: NextConfig = {
       "cdn.discordapp.com",
       "media.discordapp.net",
       "i.imgur.com",
-      "s3.expel.best",
-      "s3.expel.best"
+      "api.expel.best",
+      "img.nxyy.cloud"
     ],
   },
 };

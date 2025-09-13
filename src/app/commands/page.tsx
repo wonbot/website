@@ -21,7 +21,7 @@ export default function CommandsPage() {
       }
 
       try {
-        const response = await fetch("https://s3.expel.best/min/cmds.json");
+        const response = await fetch("https://r2.expel.best/min/cmds.json");
         const data = await response.json();
         commandsCache = data;
         setCommands(data);
